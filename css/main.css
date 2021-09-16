@@ -3,6 +3,7 @@
     --second-color: #FF5363;
     --link-color: #0d6efd;
     --bg-section-color: #f7f9fe;
+    --bg-card: #fff
 
 }
 /* start ruls */
@@ -94,19 +95,126 @@ header .nav-minu{
     margin: 0;
     transition: .5s ease-in-out;
     z-index: 1020;
+    position: relative;
+}
+header .nav-minu li{
+    width: 100px;
+    text-align: center;
+}
+header .nav-minu .slide{
+position: absolute;
+left: 0;
+top: 0;
+width: 100px;
+height: 100%;
+background-color: var(--heading-color);
+z-index: -1;
+border-radius: 15px;
+opacity: 1;
+transition: all .5s;
+}
+ul li::nth-child(1).active~.slide{
+    left: 0;
+    opacity: 1;
+}
+ul li:nth-child(2).active~.slide{
+    left: 100px;
+    opacity: 1;
+}
+ul li:nth-child(3).active~.slide{
+    left: 200px;
+    opacity: 1;
+}
+ul li:nth-child(4).active~.slide{
+    left: 300px;
+    opacity: 1;
+}
+ul li:nth-child(5).active~.slide{
+    left: 400px;
+    opacity: 1;
+}
+ul li:nth-child(6).active~.slide{
+    left: 500px;
+    opacity: 1;
+}
+ul li:nth-child(7).active~.slide{
+    left: 600px;
+    opacity: 1;
+}
+ul li:nth-child(8).active~.slide{
+    left: 700px;
+    opacity: 0;
+}
+@media (max-width: 978px){
+    header .nav-minu li{
+        
+        text-align: left;
+        
+        
+    }
+    header .nav-minu .slide{
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 44px;
+    background-color: var(--heading-color);
+    z-index: -1;
+    border-radius: 15px;
+    opacity: 1;
+    transition: all .5s;
+    }
+    ul li::nth-child(1).active~.slide{
+        top: 50px;
+        left: 100px;
+        opacity: 1;
+    }
+    ul li:nth-child(2).active~.slide{
+        top: 94px;
+        left: 100px;
+        opacity: 1;
+    }
+    ul li:nth-child(3).active~.slide{
+        top: 138px;
+        left: 100px;
+        opacity: 1;
+    }
+    ul li:nth-child(4).active~.slide{
+        top: 182px;
+        left: 100px;
+        opacity: 1;
+    }
+    ul li:nth-child(5).active~.slide{
+        top: 226px;
+        left: 100px;
+        opacity: 1;
+    }
+    ul li:nth-child(6).active~.slide{
+        top: 270px;
+        left: 100px;
+        opacity: 1;
+    }
+    ul li:nth-child(7).active~.slide{
+        top: 358px;
+        left: 100px;
+        opacity: 0;
+    }
 }
 header nav a{
 display: inline-block;
 padding: 8px;
 color:  rgba(0, 0, 0, 0.692);;
+transition: .3s;
 }
 header nav a:focus,
 header nav a:hover{
 color: rgba(0, 0, 0, 0.815);
 text-decoration: none;
 }
-header nav li.active>a{
-    color: black;
+header nav li.active a{
+    color: var(--second-color);
+    font-weight: 700;
 }
 nav #icon-nav{
 display: none;
@@ -114,13 +222,14 @@ font-size: 25px;
 cursor: pointer;
 transition: .5s;
 z-index: 1002;
+color: rgb(99, 98, 98);
 }
 #icon-nav.fa-times-circle{
     color: #007bff;
     font-size: 35px;
     z-index: 1002;
 }
-@media (max-width: 768px){
+@media (max-width: 978px){
     header .nav-minu{
         flex-direction: column;
         justify-content: start;
@@ -268,6 +377,9 @@ color: #3d4b69;
 .about .abuot-right-content .list-group{    
     box-shadow: #ddd 0 0 10px 1px;
 }
+.about .abuot-right-content .list-group .list-group-item{
+    background-color: var(--bg-card);
+}
 .about .abuot-right-content .list-group .list-group-item.list-head{    
     font-size: 21px;
     font-weight: 500;
@@ -292,7 +404,7 @@ right: 15px;
     background-color: transparent;
 }
 .transmission .card .card-body{
-    background-color: #fff;
+    background-color: var(--bg-card);
     border-top: 5px solid rgb(122, 163, 250);
 }
 
@@ -310,7 +422,7 @@ right: 15px;
     padding: 15px;
     position: relative;
     box-shadow: #ddd 0 0 10px 1px;
-    background-color: #fff;
+    background-color: var(--bg-card);
 }
 .symptoms .symptoms-content .box img{
 position: absolute;
@@ -389,7 +501,7 @@ font-weight: 500;
     background-color: var(--bg-section-color);
 }
 .protect .protect-box{
-    background-color: #fff;
+    background-color: var(--bg-card);
     padding: 50px 60px;
     border-radius: 15px;
 }
@@ -462,7 +574,7 @@ font-weight: 500;
 /* ====end Follow steps section==== */
 /* ====start Treatment section==== */
 .treatment{
-    padding: 100px 0;
+    padding: 200px 0;
     /* background-image: url(../); */
     background-color: #2766bb;
 }
@@ -483,6 +595,7 @@ font-weight: 500;
     }
 .treatment .treatment-left-content p{
     color: #fff;
+    line-height: 2;
 }
 .treatment .treatment-right-content .card-self-card{
     padding: 50px;
@@ -537,7 +650,7 @@ font-weight: 500;
 .protect-yourself .content-yourself .image-item{
 width: 80px;
 height: 80px;
-background-color: #fff;
+background-color: var(--bg-card);
 border-radius: 50%;
 border: 1px solid var(--link-color);
 text-align: center;
@@ -587,6 +700,7 @@ position: relative;
     cursor: pointer;
     position: relative;
     transition: border .5s;
+    color: #888;
 }
 .common-question ul.question li.active,
 .common-question ul.question li:hover{
@@ -653,6 +767,9 @@ position: relative;
     overflow: hidden;
     transition: all .5s ease-in;
 }
+.common-question ul.answer .answer-text span{
+    font-weight: 500;
+}
 .common-question ul.answer .answer-text.show{
     height: auto;
     overflow: visible;
@@ -670,6 +787,7 @@ padding: 30px;
 border: none;
 border-radius: 10px;
 text-align: center;
+background-color: var(--bg-card);
 }
 .latest .card img{    
 width: 100%;
@@ -736,7 +854,7 @@ footer .copyright{
    padding-top: 30px;
 }
 footer .copyright p span{
-   color: #fff;
+   color: var(--second-color);
    font-weight: 500;
 }
 /* ========= end footer ======= */
@@ -746,7 +864,7 @@ footer .copyright p span{
     right: -50px;
     bottom: 20px;
     font-size: 30px;
-    padding: 10px;
+    padding: 11px;
     background-color: var(--link-color);
     border-radius: 10px;
     color: #fff;
@@ -755,4 +873,26 @@ footer .copyright p span{
 }
 #icon-up.show{
     right: 20px;
+}
+#dark-mode{
+    z-index: 999;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 30px;
+    padding: 10px;
+    background-color: var(--link-color);
+    border-radius: 10px;
+    color: #fff;
+    transition: all .3s;
+    cursor: pointer;
+}
+#dark-mode.up{
+    bottom: 80px;
+}
+.dark{
+    background-color: rgb(15, 12, 12)
+}
+.dark-color{
+    color: #980a0a;
 }
