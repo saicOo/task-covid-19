@@ -1,6 +1,6 @@
 
 $('.js-preloader').preloadinator({
-    minTime: 2000
+    scroll: false
   });
 // wow animation
 new WOW().init();
