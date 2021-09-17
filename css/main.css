@@ -62,7 +62,7 @@ header{
 /*start nav bar */
 header nav{
     padding: 8px 16px ;
-    z-index: 10;
+    z-index: 999;
     min-width: 100%;
 }
 header nav.show{
@@ -94,7 +94,7 @@ header .nav-minu{
     align-items: center;
     margin: 0;
     transition: .5s ease-in-out;
-    z-index: 12;
+    z-index: 1001;
     position: relative;
 }
 header .nav-minu li{
@@ -218,7 +218,7 @@ nav #icon-nav{
     font-size: 25px;
     cursor: pointer;
     transition: .5s;
-    z-index:13;
+    z-index:1001;
     color: rgb(99, 98, 98);
 }
 #icon-nav.fa-times-circle{
@@ -240,7 +240,6 @@ nav #icon-nav{
         line-height: .5;
         opacity: 0;
         background-color: #fff;
-        z-index: 12;
         overflow: hidden;
     }
     header .nav-minu.show{
@@ -255,7 +254,7 @@ nav #icon-nav{
     }
 }
 .overlay{
-    z-index: 12;
+    z-index: 998;
     position: fixed;
     left: 0;
     top: 0;
@@ -860,7 +859,7 @@ footer .copyright p span{
 /* ========= end footer ======= */
 /* start icons option */
 #icon-up{
-    z-index: 10;
+    z-index: 1000;
     position: fixed;
     right: -50px;
     bottom: 20px;
@@ -876,7 +875,7 @@ footer .copyright p span{
     right: 20px;
 }
 #dark-mode{
-    z-index: 10;
+    z-index: 1000;
     position: fixed;
     right: 20px;
     bottom: 20px;
