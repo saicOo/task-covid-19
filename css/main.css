@@ -35,21 +35,21 @@ p{
     font-size: 20px;
     color: var(--link-color);
     letter-spacing: 2px;
-
+    
 }
 .section-head>h2{
     font-size: 40px;
     color: var(--heading-color);
 }
 .btn-ques{
-padding-top: 80px;
+    padding-top: 80px;
 }
 .btn-ques .btn-question{
-padding: 8px 16px;
-font-size: 20px;
+    padding: 8px 16px;
+    font-size: 20px;
 }
 .btn-ques .btn-question>i{
-margin-right: 20px;
+    margin-right: 20px;
 }
 /* =======start header======== */
 header{
@@ -62,7 +62,7 @@ header{
 /*start nav bar */
 header nav{
     padding: 8px 16px ;
-    z-index: 1000;
+    z-index: 10;
     min-width: 100%;
 }
 header nav.show{
@@ -94,7 +94,7 @@ header .nav-minu{
     align-items: center;
     margin: 0;
     transition: .5s ease-in-out;
-    z-index: 1020;
+    z-index: 12;
     position: relative;
 }
 header .nav-minu li{
@@ -102,16 +102,16 @@ header .nav-minu li{
     text-align: center;
 }
 header .nav-minu .slide{
-position: absolute;
-left: 0;
-top: 0;
-width: 100px;
-height: 100%;
-background-color: var(--heading-color);
-z-index: -1;
-border-radius: 15px;
-opacity: 1;
-transition: all .5s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: var(--heading-color);
+    z-index: -1;
+    border-radius: 15px;
+    opacity: 1;
+    transition: all .5s;
 }
 ul li::nth-child(1).active~.slide{
     left: 0;
@@ -147,23 +147,20 @@ ul li:nth-child(8).active~.slide{
 }
 @media (max-width: 978px){
     header .nav-minu li{
-        
         text-align: left;
-        
-        
     }
     header .nav-minu .slide{
-    position: absolute;
-    left: 100px;
-    top: 50px;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 44px;
-    background-color: var(--heading-color);
-    z-index: -1;
-    border-radius: 15px;
-    opacity: 1;
-    transition: all .5s;
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 44px;
+        background-color: var(--heading-color);
+        z-index: -1;
+        border-radius: 15px;
+        opacity: 1;
+        transition: all .5s;
     }
     ul li::nth-child(1).active~.slide{
         top: 50px;
@@ -196,33 +193,33 @@ ul li:nth-child(8).active~.slide{
         opacity: 1;
     }
     ul li:nth-child(7).active~.slide{
-        top: 358px;
+        top: 314px;
         left: 100px;
-        opacity: 0;
+        opacity: 1;
     }
 }
 header nav a{
-display: inline-block;
-padding: 8px;
-color:  rgba(0, 0, 0, 0.692);;
-transition: .3s;
+    display: inline-block;
+    padding: 8px;
+    color:  rgba(0, 0, 0, 0.692);;
+    transition: .3s;
 }
 header nav a:focus,
 header nav a:hover{
-color: rgba(0, 0, 0, 0.815);
-text-decoration: none;
+    color: rgba(0, 0, 0, 0.815);
+    text-decoration: none;
 }
 header nav li.active a{
     color: var(--second-color);
     font-weight: 700;
 }
 nav #icon-nav{
-display: none;
-font-size: 25px;
-cursor: pointer;
-transition: .5s;
-z-index: 1002;
-color: rgb(99, 98, 98);
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .5s;
+    z-index:13;
+    color: rgb(99, 98, 98);
 }
 #icon-nav.fa-times-circle{
     color: #007bff;
@@ -243,7 +240,7 @@ color: rgb(99, 98, 98);
         line-height: .5;
         opacity: 0;
         background-color: #fff;
-        z-index: 1002;
+        z-index: 12;
         overflow: hidden;
     }
     header .nav-minu.show{
@@ -258,7 +255,7 @@ color: rgb(99, 98, 98);
     }
 }
 .overlay{
-    z-index: 998;
+    z-index: 12;
     position: fixed;
     left: 0;
     top: 0;
@@ -345,9 +342,9 @@ header .home-content .stats-home span{
 }
 /* home content > date */
 header .home-content .date-home{
-font-size: 13px;
-font-weight: 500;
-color: #7d92bb;
+    font-size: 13px;
+    font-weight: 500;
+    color: #7d92bb;
 }
 /* ======end header====== */
 /* ==== start about section ===== */
@@ -356,17 +353,17 @@ color: #7d92bb;
 }
 
 .about .abuot-left-content h4{    
-font-size: 20px;
-color: var(--link-color);
-letter-spacing: 2px;
+    font-size: 20px;
+    color: var(--link-color);
+    letter-spacing: 2px;
 }
 .about .abuot-left-content h2{    
     font-size: 40px;
     color: var(--heading-color);
 }
 .about .abuot-left-content h5{    
-margin-bottom: 20px;
-color: #3d4b69;
+    margin-bottom: 20px;
+    color: #3d4b69;
 }
 .about .abuot-left-content h6{    
     font-size: 18.5px;
@@ -374,8 +371,12 @@ color: #3d4b69;
     color: #3d4b69;
     margin-bottom: 20px;
 }
+.about .abuot-right-content {
+    padding-bottom: 100px;
+}
 .about .abuot-right-content .list-group{    
     box-shadow: #ddd 0 0 10px 1px;
+    
 }
 .about .abuot-right-content .list-group .list-group-item{
     background-color: var(--bg-card);
@@ -386,12 +387,12 @@ color: #3d4b69;
     color: var(--heading-color);
 }
 .about .abuot-right-content .list-group .list-group-item{    
-color: var(--link-color);
-position: relative;
+    color: var(--link-color);
+    position: relative;
 }
 .about .abuot-right-content .list-group .list-group-item i{    
-position: absolute;
-right: 15px;
+    position: absolute;
+    right: 15px;
 }
 /* ===end about section=== */
 /* ==== start transmission section ===== */
@@ -411,7 +412,7 @@ right: 15px;
 .transmission .card .card-body h5{
     color:#2a81ea ;
     font-weight: 500;
-
+    
 }
 /* ==== end transmission section ===== */
 /* ====start symptoms section==== */
@@ -425,23 +426,23 @@ right: 15px;
     background-color: var(--bg-card);
 }
 .symptoms .symptoms-content .box img{
-position: absolute;
-right: 40px;
+    position: absolute;
+    right: 40px;
 top: -40px;
 width: 80px;
 height: 80px;
 border-radius: 50%;
 }
 .symptoms .symptoms-content .box h5{
-font-size: 19px;
-color: #2a81ea;
-font-weight: 500;
+    font-size: 19px;
+    color: #2a81ea;
+    font-weight: 500;
 }
 .symptoms .symptoms-content .box p{
     font-size: 17px;
 }
 .symptoms .transmission-content .box p>span{
-font-weight: 500;
+    font-weight: 500;
 }
 .symptoms .main-alert{
     display: flex;
@@ -476,8 +477,8 @@ border-radius: 50%;
 margin-bottom: 15px;
 }
 .prevention .prevention-content .box h5{
-font-size: 19px;
-font-weight: 500;
+    font-size: 19px;
+    font-weight: 500;
 }
 .prevention .prevention-content .box p{
     font-size: 17px;
@@ -575,24 +576,23 @@ font-weight: 500;
 /* ====start Treatment section==== */
 .treatment{
     padding: 200px 0;
-    /* background-image: url(../); */
     background-color: #2766bb;
 }
 .treatment .treatment-left-content h4{    
     font-size: 20px;
     color: #73e3ff;
     letter-spacing: 2px;
-    }
+}
 .treatment .treatment-left-content h2{    
-        font-size: 40px;
-        color: #fff;
+    font-size: 40px;
+    color: #fff;
 }
 .treatment .treatment-left-content h5{    
     margin: 30px 0 3px;
     color: #fff;
     font-size: 17px;
     font-weight: 500;
-    }
+}
 .treatment .treatment-left-content p{
     color: #fff;
     line-height: 2;
@@ -648,14 +648,14 @@ font-weight: 500;
     color: var(--link-color);
 }
 .protect-yourself .content-yourself .image-item{
-width: 80px;
-height: 80px;
-background-color: var(--bg-card);
-border-radius: 50%;
-border: 1px solid var(--link-color);
-text-align: center;
-margin: 0 15px;
-position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-card);
+    border-radius: 50%;
+    border: 1px solid var(--link-color);
+    text-align: center;
+    margin: 0 15px;
+    position: relative;
 }
 .protect-yourself .content-yourself .items-left .image-item::before{
     font-family: "Font Awesome 5 Free";
@@ -665,7 +665,7 @@ position: relative;
     left: -5px;
     top:-5px;
     color: black;
-    z-index: 100;
+    z-index: 10;
     color: red;
     font-size: 20px;
 }
@@ -745,7 +745,7 @@ position: relative;
 }
 .common-question ul.answer li.item>i{
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
@@ -779,29 +779,29 @@ position: relative;
 /* ====end common question section==== */
 /* ====start latest section==== */
 .latest{    
-padding: 100px 0;
-background-color: var(--bg-section-color);
+    padding: 100px 0;
+    background-color: var(--bg-section-color);
 }
 .latest .card{    
-padding: 30px;
-border: none;
-border-radius: 10px;
-text-align: center;
-background-color: var(--bg-card);
+    padding: 30px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--bg-card);
 }
 .latest .card img{    
-width: 100%;
-border-radius: 10px;
+    width: 100%;
+    border-radius: 10px;
 }
 .latest .card h5{
-margin-top: 15px;
-margin-bottom: 20px;
-font-weight: 500;
-color: #50658e;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #50658e;
 }
 .latest .card p{
-color: black;
-font-size: 17px;
+    color: black;
+    font-size: 17px;
 }
 /* ====end latest section==== */
 /* ========= start footer ======= */
@@ -824,20 +824,20 @@ footer h5{
     color: #fff;
 }
 footer p{
-color:#b2bfe0 ;
+    color:#b2bfe0 ;
 }
 footer ul{
-list-style: none;
+    list-style: none;
 }
 footer ul li{
-margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 footer a{
-color:#b2bfe0 ;
+    color:#b2bfe0 ;
 }
 footer a:focus,
 footer a:hover{
-text-decoration: none;
+    text-decoration: none;
 }
 footer .social a{
     display: inline-block;
@@ -851,15 +851,16 @@ footer hr{
     background-color: #bcc6e04a;
 }
 footer .copyright{
-   padding-top: 30px;
+    padding-top: 30px;
 }
 footer .copyright p span{
-   color: var(--second-color);
-   font-weight: 500;
+    color: var(--second-color);
+    font-weight: 500;
 }
 /* ========= end footer ======= */
+/* start icons option */
 #icon-up{
-    z-index: 999;
+    z-index: 10;
     position: fixed;
     right: -50px;
     bottom: 20px;
@@ -875,7 +876,7 @@ footer .copyright p span{
     right: 20px;
 }
 #dark-mode{
-    z-index: 999;
+    z-index: 10;
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -890,9 +891,15 @@ footer .copyright p span{
 #dark-mode.up{
     bottom: 80px;
 }
+/* end icons option */
+/* start style dark mode */
 .dark{
-    background-color: rgb(15, 12, 12)
+    background-color: rgb(15, 12, 12);
 }
 .dark-color{
     color: #980a0a;
 }
+section{
+    transition: .5s;
+}
+/* end style dark mode */

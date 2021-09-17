@@ -1,3 +1,7 @@
+
+$('.js-preloader').preloadinator({
+    minTime: 2000
+  });
 // wow animation
 new WOW().init();
 document.querySelectorAll("h1,h2,h3").forEach((h) =>{
@@ -37,7 +41,7 @@ let iconUp = document.getElementById('icon-up');
 let nav = document.querySelector('nav')
 window.onscroll = function () {
     
-    if(this.scrollY >= 800){
+    if(this.scrollY >= 600){
         iconUp.classList.add('show');
         nav.classList.add('show');
         dark.classList.add('up')
@@ -62,7 +66,7 @@ window.addEventListener('scroll', ()=> {
     sections.forEach( section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if(pageYOffset >= sectionTop -sectionHeight / 3){
+        if(pageYOffset >= sectionTop -sectionHeight / 7){
             current = section.getAttribute('id')
         }
     })
@@ -114,3 +118,30 @@ itemAnswer.forEach((item) => {
         e.target.nextElementSibling.classList.toggle('show');
     })
 });
+// function Increase Numbers Stats
+let numStatOne = document.getElementById('num-stat-1');
+let numStatTwo = document.getElementById('num-stat-2');
+let numStatThere = document.getElementById('num-stat-3');
+function increaseNumbers (){
+    
+    if (numStatOne.textContent  >= numStatOne.dataset.stat){
+        clearInterval(numberIntervalOne)
+    }else{
+        numStatOne.textContent = Number(numStatOne.textContent) + 1
+    }
+    if (numStatTwo.textContent >= numStatTwo.dataset.stat){
+        clearInterval(numberIntervalTwo)
+    }else{
+        numStatTwo.textContent = Number(numStatTwo.textContent) + 1
+    }
+    if (numStatThere.textContent >= numStatThere.dataset.stat){
+        clearInterval(numberIntervalThere)
+    }else{
+        numStatThere.textContent = Number(numStatThere.textContent) + 1
+    }
+    
+}
+numberIntervalOne = setInterval(increaseNumbers, )
+numberIntervalTwo = setInterval(increaseNumbers, )
+numberIntervalThere = setInterval(increaseNumbers, )
+
